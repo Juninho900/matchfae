@@ -1,0 +1,48 @@
+.buttonPhoto {
+    display: flex;
+    justify-content:center;
+}
+
+.buttonPhoto2 {
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    color: black;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+.back {
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border-radius: 20px;
+}
+
+.done {
+    background-color: #3ABDB2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border-radius: 20px;
+}
+
+.done h3 {
+    color: white;
+}

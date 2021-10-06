@@ -1,0 +1,16 @@
+.header2 {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(58,189,178);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.button {
+    color: white !important;
+}

@@ -1,0 +1,21 @@
+.swipeButtons {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.swipeButtons .dislike .MuiIconButton-root {
+    color: white;
+    background-color: rgb(226, 27, 27);
+    padding: 15px;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+.swipeButtons .like .MuiIconButton-root {
+    color: white;
+    background-color: rgb(50, 190, 166);
+    padding: 15px;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
+}
