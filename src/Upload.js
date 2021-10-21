@@ -1,6 +1,6 @@
 import React from 'react';
 import Header2 from './Header2.js';
-import './Upload.css';
+import './css/Upload.css';
 import IconButton from "@material-ui/core/IconButton";
 import { AppRegistry, View, Image, StyleSheet } from 'react-native';
 import { Link } from "react-router-dom";

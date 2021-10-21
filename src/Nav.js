@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Nav.css";
+import "./css/Nav.css";
 import HomeIcon from "@material-ui/icons/Home";
 import EventIcon from '@material-ui/icons/Event';
 import IconButton from "@material-ui/core/IconButton";

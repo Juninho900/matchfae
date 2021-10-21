@@ -2,7 +2,7 @@ import React from 'react';
 import CloseIcon from "@material-ui/icons/Close";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import IconButton from "@material-ui/core/IconButton";
-import "./SwipeButtons.css";
+import "./css/SwipeButtons.css";
 
 const SwipeButtons = () => {
     return (
