@@ -1,10 +1,10 @@
 import React from 'react';
 import Header2 from './Header2.js';
 import './css/Upload.css';
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from '@material-ui/core/IconButton';
 import { AppRegistry, View, Image, StyleSheet } from 'react-native';
-import { Link } from "react-router-dom";
-//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from 'react-router-dom';
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const styles = StyleSheet.create({
     container: {
@@ -39,15 +39,19 @@ const Upload = () => {
                 </div>
             </div>
             <div className="buttons">
-                <div className="back">
-                    <IconButton>
-                        <h3>Voltar</h3>
-                    </IconButton>
+                <div>
+                    <Link to = "/register">
+                        <IconButton>
+                            <h4>Voltar</h4>
+                        </IconButton>
+                    </Link>                        
                 </div>
                 <div className="done">
-                    <IconButton>
-                        <h3>Feito</h3>
-                    </IconButton>
+                    <Link to = "/loading">
+                        <IconButton>
+                            <h3>Feito</h3>
+                        </IconButton>
+                    </Link>
                 </div>
             </div>
         </div>

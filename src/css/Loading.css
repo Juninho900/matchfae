@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+body 
+{
+    background-color: #3ABDB2;
+}
+
+.logo
+{
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 70px;
+}
+
+.login
+{
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 50px;
+    margin-top: 190px;
+}

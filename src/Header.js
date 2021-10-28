@@ -1,9 +1,9 @@
 import React from 'react';
-import "./css/Header.css";
+import './css/Header.css';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import SearchIcon from '@material-ui/icons/Search';
-import IconButton from "@material-ui/core/IconButton";
-import { Link } from "react-router-dom";
+import IconButton from '@material-ui/core/IconButton';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (

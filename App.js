@@ -1,22 +1,42 @@
 import React from 'react';
-//import Header from './src/Header';
-import Header2 from "./src/Header2.js";
+import Header from './src/Header';
+import Header2 from './src/Header2.js';
 import './src/css/App.css';
-//import TinderCards from "./src/TinderCards";
-//import SwipeButtons from "./src/SwipeButtons";
-//import Nav from "./src/Nav";
+import TinderCards from './src/TinderCards';
+import SwipeButtons from './src/SwipeButtons';
+import Nav from './src/Nav';
 import Upload from './src/Upload';
+import Login from './src/Login';
+import Loading from './src/Loading';
+import Register from './src/Register';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Upload />
-      {/*<Router>*/}
-        {/* <Header /> */}
-        {/*<Switch>
-           <Route path="/menu">
+      
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/loading">
+            <Loading />
+          </Route>
+          <Route path="/upload">
+            <Upload />
+          </Route>
+        </Switch>
+      </Router>
+
+      {/* <Router>
+        <Header />
+        <Switch>
+          <Route path="/menu">
             <h1>Menu</h1>
           </Route>
           <Route path="/search">
