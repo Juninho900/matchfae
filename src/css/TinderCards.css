@@ -1,4 +1,10 @@
-.card {
+body
+{
+    background-color: white;
+}
+
+.card
+{
     position: relative;
     width: 600px;
     padding: 20px;
@@ -11,7 +17,8 @@
     box-shadow: 0px 18px 53px 0px rgba(0,0,0,.3);
 }
 
-.img {
+.img
+{
     position: relative;
     width: 385px;
     padding: 20px;
@@ -22,22 +29,27 @@
     background-position: center;
 }
 
-.name{
+.name2
+{
     margin-top: 10px;
     font-size: 30px;
+    color: black;
 }
 
-.tinderCards_cardContainer {
+.tinderCards_cardContainer
+{
     display: flex;
     justify-content: center;
     margin-top: 5vh;
 }
 
-.swipe {
+.swipe
+{
     position: absolute;
 }
 
-.infomation {
+.infomation
+{
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
@@ -45,7 +57,8 @@
     color: black;
 }
 
-.desc {
+.desc
+{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

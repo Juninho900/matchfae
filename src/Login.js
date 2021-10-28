@@ -57,9 +57,9 @@ function Login () {
 
         <View style={styles.container}>
 
-            <p className="logo">MatchFAE</p>
+            <p className="logo2">MatchFAE</p>
 
-            <p className="login">Login</p>
+            <p className="login2">Login</p>
 
             <TextInput style={styles.input} placeholder="E-mail" />
 

@@ -14,7 +14,7 @@ function Header() {
                 </IconButton>
             </Link>
             <Link to ="/">
-                <h1 className="logo">MatchFAE</h1>
+                <p className="logo3">MatchFAE</p>
             </Link>
             <Link to="/search">
                 <IconButton className="button">

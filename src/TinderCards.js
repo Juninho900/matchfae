@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { View, useState, useEffect, StyleSheet } from 'react';
 import TinderCard from "react-tinder-card";
 import './css/TinderCards.css';
 import SwipeButtons from "./SwipeButtons";
@@ -31,7 +31,7 @@ function TinderCards() {
                 <div style={{backgroundColor: '#FFFFFF'}} className="card">
                     <div>
                         <div style={{ backgroundImage: `url(${person.url})`}} className="img"></div>
-                        <h3 className="name">{person.name}</h3>
+                        <h3 className="name2">{person.name}</h3>
                         <div>
                             <div className="desc">{person.desc}</div>
                             <div>

@@ -10,17 +10,16 @@ p
     font-family: 'Baloo 2', cursive;
 }
 
-.logo 
+.logo2 
 {
     color: white;
-    font-family: 'Baloo 2', cursive;
     font-size: 70px;
+    margin-bottom: 50px;
 }
 
-.login
+.login2
 {
     color: white;
-    font-family: 'Baloo 2', cursive;
     font-size: 50px;
 }
 

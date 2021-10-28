@@ -30,30 +30,33 @@ function App() {
           <Route path="/upload">
             <Upload />
           </Route>
-        </Switch>
-      </Router>
-
-      {/* <Router>
-        <Header />
-        <Switch>
+          <Route path="/tinderCards">
+            <Header />
+            <TinderCards />
+            <Nav />
+          </Route>
           <Route path="/menu">
+            <Header />
             <h1>Menu</h1>
+            <Nav />
           </Route>
           <Route path="/search">
+            <Header />
             <h1>Busca</h1>
+            <Nav />
           </Route>
           <Route path="/info">
+            <Header />
             <h1>Info</h1>
-          </Route>
-          <Route path="/event">
-            <h1>Evento</h1>
-          </Route>
-          <Route path="/">
-            <TinderCards />
+            <Nav />
           </Route>
         </Switch>
-        <Nav />
-      </Router> */}
+        <Route path="/event">
+            <Header />
+            <h1>Evento</h1>
+            <Nav />
+          </Route>
+      </Router>
     </div>
 
   );

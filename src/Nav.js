@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Nav() {
     return (
         <div className="nav">
-            <Link to="/">
+            <Link to="/tinderCards">
                 <IconButton>
                     <HomeIcon fontSize="large" className="home-icon" />
                     <p className="home">Início</p>
