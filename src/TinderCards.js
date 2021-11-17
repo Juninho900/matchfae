@@ -4,7 +4,7 @@ import './css/TinderCards.css';
 import SwipeButtons from "./SwipeButtons";
 import { Link } from "react-router-dom";
 
-function TinderCards() {
+export default function TinderCards() {
 
     const [people, setPeople] = useState([
         {
@@ -25,29 +25,27 @@ function TinderCards() {
     ]);
 
     return (
-        <div>
-            <div className="tinderCards_cardContainer">
-            {people.map(person => (<TinderCard className="swipe" key={person.name} preventSwipe={['up', 'down']}>
-                <div style={{backgroundColor: '#FFFFFF'}} className="card">
-                    <div>
-                        <div style={{ backgroundImage: `url(${person.url})`}} className="img"></div>
-                        <h3 className="name2">{person.name}</h3>
+        <div className = "container">
+                <div className="tinderCards_cardContainer">
+                {people.map(person => (<TinderCard className="swipe" key={person.name} preventSwipe={['up', 'down']}>
+                    <div style={{backgroundColor: '#FFFFFF'}} className="card">
                         <div>
-                            <div className="desc">{person.desc}</div>
+                            <div style={{ backgroundImage: `url(${person.url})`}} className="img"></div>
+                            <h3 className="name2">{person.name}</h3>
                             <div>
-                                <Link to="/info">
-                                    <p className="infomation">MAIS INFORMAÇÕES</p>
-                                </Link> 
+                                <div className="desc">{person.desc}</div>
+                                <div>
+                                    <Link to="/info">
+                                        <p className="infomation">MAIS INFORMAÇÕES</p>
+                                    </Link> 
+                                </div>
+                                <div><SwipeButtons /></div>
                             </div>
-                            <div><SwipeButtons /></div>
                         </div>
                     </div>
+                    </TinderCard>
+                ))}
                 </div>
-                </TinderCard>
-            ))}
-            </div>
         </div>
     );
 }
-
-export default TinderCards;

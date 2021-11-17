@@ -3,6 +3,13 @@ body
     background-color: white;
 }
 
+.container {
+        flex: 1px;
+        align-items: center;
+        justify-content: center;
+        height: 577px;
+}
+
 .card
 {
     position: relative;

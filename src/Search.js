@@ -1,38 +1,57 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import styled from 'styled-components/native';
-import { Container, Header, HeaderText, Icon, Page } from './Styles';
+import './css/TinderCards.css';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { Link } from 'react-router-dom';
 
-function Menu() 
+export default function Search() 
 {
-    let H1 = styled.Text`
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
-    `;
-    let List = styled.View``;
-    let Item = styled.TouchableOpacity`
-        padding: 10px;
-    `;
-    let ItemText = styled.Text`
-        font-size: 20px;
-        text-align: center;
-        font-weight: bold;
-    `;
-
     return (
-        <Page>
-            <Container>
-                <p className="menu">Buscar</p>
-                <List>
-                    <Item><p className="listMenu"></p></Item>
-                    <Item><p className="listMenu2"></p></Item>
-                    <Item><p className="listMenu3"></p></Item>
-                    <Item><p className="listMenu4"></p></Item>
-                    <Item><p className="listMenu5"></p></Item>
-                </List>
-            </Container>
-        </Page>
+        <View style = {styles.container}>
+            <StatusBar style = "auto" />
+            <TextInput style={styles.input} placeholder="Busca" />
+            <View style = {styles.box}>
+                <Link to = "/eventDesc"><h6>Evento 1</h6>< /Link>
+            </View>
+            <View style = {styles.box}>
+                <Link to = "/info"><h6>Bilbo Baggins</h6>< /Link>
+            </View>
+            <View style = {styles.box}>
+                <Link to = "/eventDesc"><h6>Evento 2</h6>< /Link>
+            </View>
+            <View style = {styles.box}>
+                <Link to = "/info"><h6>Alfrid Lickspittle</h6>< /Link>
+            </View>
+            <View style = {styles.box}>
+                <Link to = "/eventDesc"><h6>Evento 3</h6>< /Link>
+            </View>
+            <View style = {styles.box}>
+                <Link to = "/eventDesc"><h6>Gandalf</h6>< /Link>
+            </View>
+        </View>
     );
 }
 
-export default Menu;
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    input: {
+        backgroundColor: '#fff',
+        width: 450,
+        height: 40,
+        borderRadius: 20,
+        padding: 10,
+        marginBottom: 20,
+    },
+    box: {
+        backgroundColor: '#fff',
+        width: 400,
+        height: 70,
+        borderRadius: 20,
+        padding: 10,
+        marginBottom: 20,
+    },
+});

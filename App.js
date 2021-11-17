@@ -14,6 +14,8 @@ import Search from './src/Search';
 import Exit from './src/Exit';
 import Infomation from './src/Infomation';
 import NewEvent from './src/NewEvent';
+import EventList from './src/EventList';
+import EventDesc from './src/EventDesc';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -54,7 +56,7 @@ function App() {
           </Route>
           <Route path="/event">
             <Header />
-            <h1>Evento</h1>
+            <EventList />
             <Nav />
           </Route>
           <Route path="/exit">
@@ -63,6 +65,10 @@ function App() {
           <Route path="/newEvent">
             <Header />
             <NewEvent />
+          </Route>
+          <Route path="/eventDesc">
+            <Header />
+            <EventDesc />
           </Route>
         </Switch>
       </Router>

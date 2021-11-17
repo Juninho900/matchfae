@@ -1,30 +1,12 @@
 import React, { useState } from 'react';
+import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Picker } from 'react-native';
 import styled from "styled-components/native";
-import { Button, ButtonText, Container, Header, HeaderText, Icon, Image, Page, Picture } from "./Styles3";
+import { Link } from 'react-router-dom';
+
+import { Page, Header, HeaderText, Picture, Image, Description, Name, H1, P, ButtonText, ButtonContainer } from "./Styles";
 
 export default function NewEvent () 
 {
-    let Title = styled.Text`
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 15px;
-    `;
-    let View = styled.View``;
-    let Input = styled.TextInput`
-        padding: 5px 10px;
-        border: 1px solid #000;
-        border-radius: 20px;
-        font-size: 20px;
-        margin-bottom: 5px;
-    `;
-    let InputGroup = styled.View`
-        flex-direction: row;
-    `;
-    let Label = styled.Text`
-        padding: 5px;
-        font-size: 20px;
-    `;
 
     const [nomeEvento, setNomeEvento] = useState([])
     const [organizador, setOrganizador] = useState([])
@@ -48,50 +30,94 @@ export default function NewEvent ()
     }
 
     return (
-        <Page>
-            <Container>
-                <View>
-                    <h1 className = "titleNewEvent">Criar novo evento</h1>
-                    <Input placeholder="Nome do evento" onChangeText = {text => setNomeEvento(text)} />
-                    <Input placeholder="Organizador do evento" onChangeText = {text => setOrganizador(text)} />
-                    <Input placeholder="Endereço" onChangeText = {text => setEndereco(text)} />
-                    <Input placeholder="Número" onChangeText = {text => setNumero(text)} />
-                    
-                    <InputGroup>
-                        <Label>Data do começo:</Label>
-                        <Input placeholder="DD/MM/AAAA" onChangeText = {text => dtComeco(text)} />
-                    </InputGroup>
-                    <InputGroup>
-                        <Label>Hora do começo:</Label>
-                        <Input placeholder="HH:MM" onChangeText = {text => hrComeco(text)} />
-                    </InputGroup>
-
-                    <InputGroup>
-                        <Label>Data do término:</Label>
-                        <Input placeholder="DD/MM/AAAA" onChangeText = {text => dtFim(text)} />
-                    </InputGroup>
-                    <InputGroup>
-                        <Label>Hora do término:</Label>
-                        <Input placeholder="HH:MM" onChangeText = {text => hrFim(text)} />
-                    </InputGroup>
-                    
+        <View style={styles.container}>
+                    <h1 >Criar novo evento</h1>
+                    <TextInput style={styles.input} placeholder="Nome do evento" onChangeText = {text => setNomeEvento(text)} />
+                    <TextInput style={styles.input} placeholder="Organizador do evento" onChangeText = {text => setOrganizador(text)} />
+                    <TextInput style={styles.input} placeholder="Endereço" onChangeText = {text => setEndereco(text)} />
+                    <TextInput style={styles.input} placeholder="Número" onChangeText = {text => setNumero(text)} />
+                    <h7>Data do começo:</h7><TextInput style={styles.inputShort} placeholder="DD/MM/AAAA" onChangeText = {text => setDtComeco(text)} />
+                    <h7>Hora do começo:</h7><TextInput style={styles.inputShort} placeholder="HH:MM" onChangeText = {text => setHrComeco(text)} />
+                    <h7>Data do término:</h7><TextInput style={styles.inputShort} placeholder="DD/MM/AAAA" onChangeText = {text => setDtFim(text)} />
+                    <h7>Hora do término:</h7><TextInput style={styles.inputShort} placeholder="HH:MM" onChangeText = {text => setHrFim(text)} />
                     <Picture style={{alignItems: "center"}}>
-                        <Image
-                         style={{ borderRadius: 15 }}
-                         source={require("../assets/eventos.png")}
-                         width={300}
-                         height={300}
-                        />
+                        <Image style={{ borderRadius: 15 }} source={require("../assets/eventos.png")} width={300} height={300} />
                     </Picture>
-
-                    <Button color="#C4C4C4">
-                        <ButtonText color="#000">Adicionar a foto do evento</ButtonText>
-                    </Button>
-                    <Button onPress = {() => publicar()}>
-                        <ButtonText>Publicar</ButtonText>
-                    </Button>
-                </View>
-            </Container>
-        </Page>
+                    <TouchableOpacity style={styles.button}>
+                        <Text style={styles.btnText}>Adicionar a foto do evento</Text>
+                    </TouchableOpacity>
+                    <Link to = "/event">
+                    <TouchableOpacity style={styles.button2} onPress = {() => publicar()}>
+                        <Text style={styles.btnText2}>Publicar</Text>
+                    </TouchableOpacity>
+                    </Link>
+        </View>
     );
 }
+
+const styles = StyleSheet.create
+({
+    container:
+    {
+        alignItems: 'center',
+    },
+    input:
+    {
+      margin: 10,
+      padding: 10,
+      width: 300,
+      backgroundColor: '#fff',
+      fontSize: 16,
+      fontWeight:'bold',
+      borderRadius: 5,
+    },
+    inputShort:
+    {
+      margin: 10,
+      padding: 10,
+      width: 150,
+      backgroundColor: '#fff',
+      fontSize: 16,
+      fontWeight:'bold',
+      borderRadius: 5,
+    },
+    button:
+    {
+        width: 300,
+        height: 42,
+        backgroundColor: '#C4C4C4',
+        margin: 10,
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    button2:
+    {
+        width: 300,
+        height: 42,
+        backgroundColor: '#fff',
+        margin: 10,
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    btnText:
+    {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#FFFFFF',
+    },
+    btnText2:
+    {
+      fontSize: 28,
+      fontWeight: 'bold',
+      color: '#3ABDB2'
+    },
+    buttonCreate:
+    {
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: '#fff',
+        margin: 10
+    },
+});
