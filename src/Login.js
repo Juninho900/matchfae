@@ -1,7 +1,52 @@
-import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import './css/Login.css';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet } from 'react-native';
 import { Link } from 'react-router-dom';
+
+export default function Login()
+{
+    const [email, setEmail] = useState([])
+    const [senha, setSenha] = useState([])
+
+    const login = () =>
+    {
+         alert(email);
+         alert(senha);
+    }
+
+    return (
+        <View style={styles.container}>
+        <StatusBar style = "auto" />
+
+            <p className="logo2">MatchFAE</p>
+
+            <p className="login2">Login</p>
+
+            <TextInput placeholder="E-mail" style={styles.input} onChangeText = {text => setEmail(text)} />
+
+            <TextInput placeholder="Senha" style={styles.input} secureTextEntry={true} onChangeText = {text => setSenha(text)} />
+
+            <Link to = "/loading">
+                <TouchableOpacity style={styles.button} onPress = {() => login()}>
+                    <Text style={styles.btnText}>Entrar</Text>
+                </TouchableOpacity>
+            </Link>
+
+            <TouchableOpacity>
+                <Text style={styles.buttonForgot}>Esqueceu sua senha?</Text>
+            </TouchableOpacity>
+
+            <p className="or">Ou</p>
+
+            <Link to = "/register">
+                <TouchableOpacity>
+                    <Text style={styles.buttonCreate}>Criar uma nova Conta</Text>
+                </TouchableOpacity>
+            </Link>
+        </View>
+    )
+}
 
 const styles = StyleSheet.create
 ({
@@ -51,39 +96,3 @@ const styles = StyleSheet.create
         marginBottom: 10
     },
 });
-
-function Login () {
-    return (
-
-        <View style={styles.container}>
-
-            <p className="logo2">MatchFAE</p>
-
-            <p className="login2">Login</p>
-
-            <TextInput style={styles.input} placeholder="E-mail" />
-
-            <TextInput style={styles.input} secureTextEntry={true} placeholder="Senha" />
-
-            <Link to = "/loading">
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.btnText}>Entrar</Text>
-                </TouchableOpacity>
-            </Link>
-
-            <TouchableOpacity>
-                <Text style={styles.buttonForgot}>Esqueceu sua senha?</Text>
-            </TouchableOpacity>
-
-            <p className="or">Ou</p>
-
-            <Link to = "/register">
-                <TouchableOpacity>
-                    <Text style={styles.buttonCreate}>Criar uma nova Conta</Text>
-                </TouchableOpacity>
-            </Link>
-        </View>
-    )
-}
-
-export default Login;

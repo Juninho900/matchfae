@@ -13,7 +13,7 @@ function Header() {
                     <DehazeIcon className="header_icon" fontSize="large" />
                 </IconButton>
             </Link>
-            <Link to ="/">
+            <Link to ="/tinderCards">
                 <p className="logo3">MatchFAE</p>
             </Link>
             <Link to="/search">

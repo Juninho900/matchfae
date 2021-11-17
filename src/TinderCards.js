@@ -35,7 +35,7 @@ function TinderCards() {
                         <div>
                             <div className="desc">{person.desc}</div>
                             <div>
-                                <Link to="info">
+                                <Link to="/info">
                                     <p className="infomation">MAIS INFORMAÇÕES</p>
                                 </Link> 
                             </div>

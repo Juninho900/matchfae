@@ -1,7 +1,7 @@
 import React from 'react';
+import './src/css/App.css';
 import Header from './src/Header';
 import Header2 from './src/Header2.js';
-import './src/css/App.css';
 import TinderCards from './src/TinderCards';
 import SwipeButtons from './src/SwipeButtons';
 import Nav from './src/Nav';
@@ -9,6 +9,11 @@ import Upload from './src/Upload';
 import Login from './src/Login';
 import Loading from './src/Loading';
 import Register from './src/Register';
+import Menu from './src/Menu';
+import Search from './src/Search';
+import Exit from './src/Exit';
+import Infomation from './src/Infomation';
+import NewEvent from './src/NewEvent';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -37,25 +42,29 @@ function App() {
           </Route>
           <Route path="/menu">
             <Header />
-            <h1>Menu</h1>
-            <Nav />
+            <Menu />
           </Route>
           <Route path="/search">
             <Header />
-            <h1>Busca</h1>
-            <Nav />
+            <Search />
           </Route>
           <Route path="/info">
             <Header />
-            <h1>Info</h1>
-            <Nav />
+              <Infomation />
           </Route>
-        </Switch>
-        <Route path="/event">
+          <Route path="/event">
             <Header />
             <h1>Evento</h1>
             <Nav />
           </Route>
+          <Route path="/exit">
+            <Exit />
+          </Route>
+          <Route path="/newEvent">
+            <Header />
+            <NewEvent />
+          </Route>
+        </Switch>
       </Router>
     </div>
 
